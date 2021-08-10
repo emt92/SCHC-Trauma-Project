@@ -46,7 +46,9 @@ Var1 <- Pediatric_Data_Under_18 %>%
          Embolism_Site_Vascular = factor(ESVASCULAR, labels = c("Not Recorded","No","Yes")),
          Embolism_Site_Aorta = factor(ESAORTA, labels = c("Not Recorded","No","Yes")),
          Hospital_Complication_DVT = factor(HC_DVTHROMBOSIS, labels = c("Not Recorded","No","Yes")),
-         Hospital_Complication_VTE = factor(HC_EMBOLISM, labels = c("Not Recorded","No","Yes"))) %>%
+         Hospital_Complication_VTE = factor(HC_EMBOLISM, labels = c("Not Recorded","No","Yes")),
+         Prophylaxis_Type = factor(VTEPROPHYLAXISTYPE, levels = c(1,5,6,7,8,9,10), labels = c("Heparin", "None","LMWH","Direct Thrombin Inhibitor", "Xa Inhibitor","Coumadin","other")),
+         Hemorrhage_Surgery_Type = factor(HMRRHGCTRLSURGTYPE, levels = c(1,2,3,4,5,6,7,8), labels = c("None","Laparotomy","Thoracotomy","Sternotomy","Extremity","Neck","Traumatic Amputation","Other Skin/Soft Tissue"))) %>%
         
          
   select(sex,AGEYEARS,ASIAN,PACIFICISLANDER,RACEOTHER,AMERICANINDIAN,BLACK,WHITE,ethnicity,Trauma_Center_Criteria_Score_GCS_13,Trauma_Center_Criteria_Multiple_Long_Bone_Fractures,Trauma_Center_Criteria_Chest_Wall_Instability,Trauma_Center_Criteria_Pelvic_Fracture,Trauma_Center_Criteria_Paralysis,Trauma_Center_Criteria_Penetration_Injury,PULSERATE,PULSEOXIMETRY,TEMPERATURE,respiratory_assistance,RESPIRATORYRATE,supplemental_oxygen,HEIGHT,WEIGHT,TOTALGCS,GCS_Qualified_Intubation,GCS_Qualified_Sedated_Paralyzed,Comorbidity_Anticoagulent_Use,Comorbidity_Bleeding_Disorder,Comorbidity_Diabetes,Comorbidity_Chemotherapy,Comorbidity_Disseminated_Cancer,Comorbidity_Smoker,Comorbidity_Renal_Failure,TBIHIGHESTTOTALGCS,PMGCSQ_SEDATEDPARALYZED,PMGCSQ_INTUBATED,TBI_Midline_Shift,ICPEV_Drain,ICPPARENCH,VTEPROPHYLAXISTYPE,VTEProphylaxisMins,VTEProphylaxisDays, VTEPROPHYLAXISTYPE,BLOOD4HOURS,BLOOD24HOURS,PLASMA4HOURS,PLASMA24HOURS, PLATELETS4HOURS,PLATELETS24HOURS,Embolism_Site_Liver,ESSPLEEN,Embolism_Site_Kidney,Embolism_Site_Pelvis,Embolism_Site_Vascular,Embolism_Site_Aorta,HMRRHGCTRLSURGTYPE,Hospital_Complication_DVT,Hospital_Complication_VTE) 
